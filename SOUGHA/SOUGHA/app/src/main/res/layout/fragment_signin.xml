@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:context=".view.SignInFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19.94dp"
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="#686662"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSkip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="19dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/skip"
+                    android:textColor="@color/stormDust"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgSoughaLogo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="79dp"
+                    android:src="@drawable/soughlogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnBack" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="47dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="@string/sign_in2"
+                android:textColor="@color/darkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clHeader" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="@string/just_a_few_more_detail_and_you_can_nget_started"
+                android:textAlignment="center"
+                android:textColor="@color/darkGrey"
+                app:layout_constraintEnd_toEndOf="@id/txtSignIn"
+
+                app:layout_constraintStart_toStartOf="@id/txtSignIn"
+                app:layout_constraintTop_toBottomOf="@id/txtSignIn" />
+
+            <!--            <com.hbb20.CountryCodePicker-->
+            <!--                android:id="@+id/ccPicker"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="44dp"-->
+            <!--                android:layout_marginTop="54dp"-->
+            <!--                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"-->
+            <!--                android:drawablePadding="20dp"-->
+            <!--                android:hint="@string/_971"-->
+            <!--                app:ccpDialog_showTitle="false"-->
+            <!--                app:ccp_showFlag="false"-->
+            <!--                app:ccp_showFullName="false"-->
+            <!--                app:ccp_showNameCode="false"-->
+            <!--                app:ccp_showPhoneCode="true"-->
+            <!--                app:ccp_textSize="16dp"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/txtDetail" />-->
+
+            <!--            <View-->
+            <!--                android:id="@+id/vlCCPicker"-->
+            <!--                android:layout_width="100dp"-->
+            <!--                android:layout_height="1dp"-->
+            <!--                android:layout_marginStart="44dp"-->
+            <!--                android:background="#BFBFBF"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/ccPicker"-->
+
+            <!--                />-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="54dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="@string/email2"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDetail" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:backgroundTint="@color/silver"
+                android:drawablePadding="20dp"
+                android:ems="12"
+                android:fontFamily="@font/josefinsans_regular"
+                android:hint="@string/iam_naeem_hotmail_com2"
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toBottomOf="@id/txtEmail"
+                app:layout_constraintStart_toEndOf="@id/txtEmail"
+                app:layout_constraintTop_toTopOf="@id/txtEmail" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="@string/password"
+                android:textColor="@color/silverlight"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:boxCornerRadiusBottomEnd="0dp"
+                app:boxCornerRadiusBottomStart="0dp"
+                app:boxCornerRadiusTopEnd="0dp"
+                app:boxCornerRadiusTopStart="0dp"
+                app:hintTextAppearance="@style/TILStyle"
+                app:layout_constraintEnd_toEndOf="@id/etEmail"
+                app:layout_constraintStart_toStartOf="@id/etEmail"
+                app:layout_constraintTop_toBottomOf="@id/etEmail"
+                app:passwordToggleEnabled="true">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    style="@style/TILStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/silver"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:hint="@string/pwdhint"
+                    android:inputType="textPassword"
+                    android:textColor="@color/silver"
+                    android:theme="@style/Theme.App.Base"
+                    app:layout_constraintStart_toStartOf="@id/etMobileno"
+                    app:layout_constraintTop_toBottomOf="@id/etMobileno"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtResetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="@string/reset_you_password"
+                android:textColor="@color/brown"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/etInputLayout"
+                app:layout_constraintTop_toBottomOf="@id/etInputLayout" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtResetPassword"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="47dp"
+                android:backgroundTint="@color/stormDust"
+                android:fontFamily="@font/josefinsans_regular"
+                android:paddingHorizontal="130dp"
+                android:paddingTop="21dp"
+                android:paddingBottom="18dp"
+                android:text="@string/sign_in3"
+                app:cornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@id/txtResetPassword" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtOr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/josefinsans_regular"
+                android:text="@string/or"
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSignIn"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignInWithOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="123dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/josefinsans_regular"
+                android:paddingHorizontal="80dp"
+                android:paddingTop="21dp"
+                android:paddingBottom="18dp"
+                android:text="@string/sign_in_with_otp"
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtOr"
+                app:strokeColor="#686662"
+                app:strokeWidth="1dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

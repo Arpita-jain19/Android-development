@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">SOUGHA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="welcome_to_sougha">Welcome to Sougha</string>
+    <string name="start_earning_and_spending_sougha_lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting">Start earning and spending Sougha Lorem Ipsum is simply dummy text of the printing and typesetting</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="sign_in2">SIGN IN</string>
+    <string name="just_a_few_more_detail_and_you_can_nget_started">Just a few more detail and you can \nget started.</string>
+    <string name="_971">+971</string>
+    <string name="_9179352310">9179352310</string>
+    <string name="password">Password</string>
+    <string name="pwdhint">_______</string>
+    <string name="reset_you_password">Reset you password</string>
+    <string name="sign_in3">Sign In</string>
+    <string name="or">or</string>
+    <string name="sign_in_with_otp">Sign in with OTP</string>
+    <string name="arpita_jain">Arpita Jain</string>
+    <string name="close">Close</string>
+    <string name="set_up_your_account">Set up your account</string>
+    <string name="just_a_few_more_detail_and_you_can_n_get_started">Just a few more detail and you can\n get started.</string>
+    <string name="full_name">Full Name*</string>
+    <string name="mobile">Mobile*</string>
+    <string name="_91">+91</string>
+    <string name="_91793523102">9179352310</string>
+    <string name="email">Email*</string>
+    <string name="jainarpita56_gmail_com">jainarpita56@gmail.com</string>
+    <string name="password2">Password*</string>
+    <string name="pwdhint2">----------</string>
+    <string name="confirm_password">Confirm Password*</string>
+    <string name="pwdhint3">---------</string>
+    <string name="allow_face_id_to_sign_in">Allow Face ID to sign in</string>
+    <string name="by_signing_up_you_are_agreeing_that_you_are_18_and_naccept_soughah_reward_s_terms_of_use">By signing up, you are agreeing that you are 18+ and \naccept Soughah Reward\'s Terms of Use.</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="get_started">Get Started</string>
+    <string name="iam_naeem_hotmail_com">iam.naeem@hotmail.com</string>
+    <string name="password_validation"> "Passsword should contain minimum 8 characters with one special character ,digit and one uppercase letter"</string>
+    <string name="terms_and_conditions">"By signing up, you are agreeing that you are \n18+ and accept Soughah Reward's Terms of Use."</string>
+    <string name="title_activity_main_home">MainActivityHome</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="home">Home</string>
+    <string name="offers">Offers</string>
+    <string name="rewards">Rewards</string>
+    <string name="branch">Branch</string>
+    <string name="account">Account</string>
+    <string name="transaction">Transaction</string>
+    <string name="claims">Claims</string>
+    <string name="calculator">Calculator</string>
+    <string name="hello_nishita">Hello, Nishita</string>
+    <string name="rewards_balance">Rewards Balance</string>
+    <string name="_129_876">129,876</string>
+    <string name="aed_1295">AED 1295</string>
+    <string name="platinum">PLATINUM</string>
+    <string name="_1_3_5_7">1 3 5 7</string>
+    <string name="_0_0_3_4">0 0 3 4</string>
+    <string name="_9_8_3_4">9 8 3 4</string>
+    <string name="_2_3_6_7">2 3 6 7</string>
+    <string name="add_to_apple_wallet">Add to Apple Wallet</string>
+    <string name="partner_offers">Partner Offers</string>
+    <string name="recommended_for_you">Recommended for you</string>
+    <string name="valid_until_30_june">Valid until:30 june</string>
+    <string name="_35_off_across_all_uae">35% OFF across all UAE</string>
+    <string name="home2">HOME</string>
+    <string name="_2xl">2xl</string>
+    <string name="_2xl_2">2xl</string>
+    <string name="home3">HOME</string>
+    <string name="_35_off_across_all_uae2">35% OFF across all UAE</string>
+    <string name="valid_until_30_june2">Valid until:30 june</string>
+    <string name="manage_your_settings_and_preferences">Manage your settings and preferences</string>
+    <string name="my_account">My Account</string>
+    <string name="account_detail">ACCOUNT DETAIL</string>
+    <string name="my_profile">My Profile</string>
+    <string name="transaction2">Transaction</string>
+    <string name="claim_my_rewards">Claim My Rewards</string>
+    <string name="rewards_calculator">Rewards Calculator</string>
+    <string name="change_password">Change Password</string>
+    <string name="communication_preferences">COMMUNICATION PREFERENCES</string>
+    <string name="app_preferences">APP PREFERENCES</string>
+    <string name="customer_service">CUSTOMER SERVICE</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="offers_fragment">Offers_fragment</string>
+    <string name="email2">Email</string>
+    <string name="iam_naeem_hotmail_com2">iam.naeem@hotmail.com</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_and_condtitions">Terms and Condtitions</string>
+    <string name="faq_s">FAQ\'s</string>
+    <string name="uae">UAE</string>
+    <string name="country_amp_language"><![CDATA[Country & Language]]></string>
+    <string name="allow_face_id_to_sign_in2">Allow Face ID to Sign in</string>
+    <string name="sms_notification">SMS Notification</string>
+    <string name="email_notification">Email Notification</string>
+    <string name="push_notification">Push Notification</string>
+</resources>

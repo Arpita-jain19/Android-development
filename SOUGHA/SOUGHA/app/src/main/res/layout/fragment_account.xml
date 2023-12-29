@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".view.AccountFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/foggyGrey"
+            app:cardCornerRadius="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    android:tint="#686662"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profileimg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/addProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-30dp"
+                    android:layout_marginBottom="-10dp"
+                    android:src="@drawable/ellipse"
+                    app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+                    app:layout_constraintStart_toEndOf="@id/imgProfile" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/baseline_camera_alt_24"
+                    android:tint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/addProfile"
+                    app:layout_constraintEnd_toEndOf="@id/addProfile"
+                    app:layout_constraintStart_toStartOf="@id/addProfile"
+                    app:layout_constraintTop_toTopOf="@id/addProfile" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/my_account"
+                    android:textColor="@color/darkBrown"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="9dp"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="@string/manage_your_settings_and_preferences"
+                    android:textColor="@color/darkBrown"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtAccount" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAccountDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/lightWhite"
+            android:elevation="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvProfile"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtDetailsAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/account_detail"
+                    android:textColor="@color/darkBrown"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgExapndCollapse"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/traingle"
+                    app:layout_constraintBottom_toBottomOf="@id/txtDetailsAccount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtDetailsAccount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/my_profile"
+                    android:textColor="@color/foggyGrey"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtDetailsAccount" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgForwardArrow"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:tint="@color/lightGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtProfile" />
+
+                <View
+                    android:id="@+id/viewProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/silver"
+                    app:layout_constraintStart_toStartOf="@id/txtProfile"
+                    app:layout_constraintTop_toBottomOf="@id/txtProfile" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtTransaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/transaction2"
+                    android:textColor="@color/foggyGrey"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewProfile" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgArrowTransaction"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:tint="@color/lightGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtTransaction" />
+
+                <View
+                    android:id="@+id/viewTransaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/silver"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txtTransaction"
+                    app:layout_constraintTop_toBottomOf="@id/txtTransaction" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtClaimRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/claim_my_rewards"
+                    android:textColor="@color/foggyGrey"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewTransaction" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgArrowClaim"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:tint="@color/lightGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtClaimRecord" />
+
+                <View
+                    android:id="@+id/viewClaim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/silver"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txtClaimRecord"
+                    app:layout_constraintTop_toBottomOf="@id/txtClaimRecord" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtReward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/rewards_calculator"
+                    android:textColor="@color/foggyGrey"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewClaim" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgArrowReward"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:tint="@color/lightGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtReward" />
+
+                <View
+                    android:id="@+id/viewReward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/silver"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txtReward"
+                    app:layout_constraintTop_toBottomOf="@id/txtReward" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/change_password"
+                    android:textColor="@color/foggyGrey"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewReward" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgArrowPassword"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="18dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:tint="@color/lightGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtPassword" />
+
+                <View
+                    android:id="@+id/viewPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/silver"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txtPassword"
+                    app:layout_constraintTop_toBottomOf="@id/txtPassword" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupAccountDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:constraint_referenced_ids="txtProfile,imgForwardArrow,viewProfile,txtTransaction,imgArrowTransaction,viewTransaction,txtClaimRecord,imgArrowClaim,viewClaim,txtPassword,imgArrowPassword,viewPassword,txtReward,imgArrowReward,viewReward" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvPreferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/lightWhite"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvAccountDetails"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtCommunication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/communication_preferences"
+                    android:textColor="@color/darkBrown"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgCPref"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/traingle"
+                    app:layout_constraintBottom_toBottomOf="@id/txtCommunication"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtCommunication" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtPushNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/push_notification"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtCommunication" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchPushNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="19dp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="@id/txtPushNotification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtPushNotification"
+                    app:layout_constraintVertical_bias="0.645"
+                    app:track="@drawable/track" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtEmailNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/email_notification"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtPushNotification" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchEmailNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="19dp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="@id/txtEmailNotification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtEmailNotification"
+                    app:layout_constraintVertical_bias="0.645"
+                    app:track="@drawable/track" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSmsNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/sms_notification"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtEmailNotification" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchSMSNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="19dp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="@id/txtSmsNotification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtSmsNotification"
+                    app:layout_constraintVertical_bias="0.645"
+                    app:track="@drawable/track" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupCommunicationPref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="txtPushNotification,switchPushNotification,txtEmailNotification,switchEmailNotification,txtSmsNotification,switchSMSNotification" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAppPreferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/lightWhite"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvPreferences"
+
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtAppPref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/app_preferences"
+                    android:textColor="@color/darkBrown"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAppPref"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/traingle"
+                    app:layout_constraintBottom_toBottomOf="@id/txtAppPref"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtAppPref" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtAllowFaceId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/allow_face_id_to_sign_in2"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtAppPref" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAllowFaceId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="19dp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="@id/txtAllowFaceId"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtAllowFaceId"
+                    app:layout_constraintVertical_bias="0.645"
+                    app:track="@drawable/track" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/country_amp_language"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtAllowFaceId" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtUAE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/uae"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@id/switchAllowFaceId"
+                    app:layout_constraintTop_toTopOf="@id/txtCountry" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgBackArrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/silver"
+                    app:layout_constraintBottom_toBottomOf="@id/txtUAE"
+                    app:layout_constraintStart_toEndOf="@id/txtUAE"
+                    app:layout_constraintTop_toTopOf="@id/txtUAE" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupAppPref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="txtCountry,txtUAE,imgBackArrow,switchAllowFaceId,txtAllowFaceId" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCustomerService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/lightWhite"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvAppPreferences"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtCustomerService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/customer_service"
+                    android:textColor="@color/darkBrown"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgAppCustomer"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/traingle"
+                    app:layout_constraintBottom_toBottomOf="@id/txtCustomerService"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtCustomerService" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtFAQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/faq_s"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtCustomerService"
+                     />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgBackArrowFAQ"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/silver"
+                    app:layout_constraintBottom_toBottomOf="@id/txtFAQ"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintTop_toTopOf="@id/txtFAQ" />
+
+                <View
+                    android:id="@+id/viewFAQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/silver"
+                    app:layout_constraintStart_toStartOf="@id/txtFAQ"
+                    app:layout_constraintTop_toBottomOf="@id/txtFAQ" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtTermsandCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/terms_and_condtitions"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="26dp"
+                    app:layout_constraintTop_toBottomOf="@id/viewFAQ"
+                    />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgBackArrowTerms"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/silver"
+                    app:layout_constraintBottom_toBottomOf="@id/txtTermsandCondition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintTop_toTopOf="@id/txtTermsandCondition" />
+
+                <View
+                    android:id="@+id/viewTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/silver"
+                    app:layout_constraintStart_toStartOf="@id/txtTermsandCondition"
+                    app:layout_constraintTop_toBottomOf="@id/txtTermsandCondition" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtPrivacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/privacy_policy"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="26dp"
+                    app:layout_constraintTop_toBottomOf="@id/viewTerms"
+                    />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgPrivacy"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/silver"
+                    app:layout_constraintBottom_toBottomOf="@id/txtPrivacy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintTop_toTopOf="@id/txtPrivacy" />
+
+                <View
+                    android:id="@+id/viewPrivacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/silver"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintStart_toStartOf="@id/txtPrivacy"
+                    app:layout_constraintTop_toBottomOf="@id/txtPrivacy" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="Contact Us"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="26dp"
+                    app:layout_constraintTop_toBottomOf="@id/viewPrivacy"
+                    />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgContact"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/silver"
+                    app:layout_constraintBottom_toBottomOf="@id/txtContact"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintTop_toTopOf="@id/txtContact" />
+
+                <View
+                    android:id="@+id/viewContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/silver"
+                    app:layout_constraintStart_toStartOf="@id/txtContact"
+                    app:layout_constraintTop_toBottomOf="@id/txtContact" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="@string/sign_out"
+                    android:textColor="@color/brown"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="26dp"
+                    app:layout_constraintTop_toBottomOf="@id/viewContact"
+                    />
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="txtFAQ,imgBackArrowFAQ,viewFAQ,txtTermsandCondition,imgBackArrowTerms,viewTerms,txtPrivacy,viewPrivacy,imgPrivacy,txtContact,imgContact,viewContact,txtSignOut"
+           /> </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

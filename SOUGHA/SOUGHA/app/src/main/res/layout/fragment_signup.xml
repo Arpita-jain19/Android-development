@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+<variable
+    name="signupviewmodel"
+    type="com.example.sougha.viewmodals.SignUpViewModel" />
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".view.SignUpFragment">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/close"
+            android:textColor="#212121"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSetAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/set_up_your_account"
+            android:textColor="@color/darkGrey"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtClose" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/just_a_few_more_detail_and_you_can_n_get_started"
+            android:textAlignment="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSetAccount" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtFname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/full_name"
+            android:textAlignment="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtStart" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:fontFamily="@font/josefinsans_regular"
+            android:hint="@string/arpita_jain"
+            android:inputType="text"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/silver"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/txtFname"
+            app:layout_constraintTop_toBottomOf="@id/txtStart" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/mobile"
+            android:textAlignment="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtFname" />
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/etCountryCode"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="55dp"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"-->
+<!--            android:fontFamily="@font/josefinsans_regular"-->
+<!--            android:hint="@string/_91"-->
+<!--            android:textColor="@color/silver"-->
+<!--            app:layout_constraintStart_toEndOf="@id/txtFname"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/etFname" />-->
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="30dp"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+            android:drawablePadding="20dp"
+            android:hint="@string/_971"
+            app:ccpDialog_showTitle="false"
+
+            app:ccp_showFlag="false"
+            app:ccp_showFullName="false"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="true"
+            app:ccp_textSize="16dp"
+            app:layout_constraintStart_toEndOf="@id/txtFname"
+
+            app:layout_constraintTop_toBottomOf="@id/etFname" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMobileno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="40dp"
+            android:ems="8"
+            android:text="@={signupviewmodel.usermobile}"
+            android:fontFamily="@font/josefinsans_regular"
+            android:hint="@string/_91793523102"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="@color/silver"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/ccPicker"
+            app:layout_constraintStart_toEndOf="@id/ccPicker"
+            app:layout_constraintTop_toBottomOf="@id/etFname" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/email"
+            android:textAlignment="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtMobile" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="25dp"
+            android:ems="12"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@={signupviewmodel.userEmail}"
+            android:hint="@string/iam_naeem_hotmail_com"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/silver"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/txtFname"
+            app:layout_constraintTop_toBottomOf="@id/ccPicker"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/password2"
+            android:textAlignment="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            app:boxCornerRadiusBottomEnd="0dp"
+            app:boxCornerRadiusBottomStart="0dp"
+            app:boxCornerRadiusTopEnd="0dp"
+            app:boxCornerRadiusTopStart="0dp"
+            app:hintTextAppearance="@style/TILStyle"
+            app:layout_constraintEnd_toEndOf="@id/etEmail"
+            app:layout_constraintStart_toStartOf="@id/etEmail"
+            app:layout_constraintTop_toBottomOf="@id/etEmail"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                style="@style/TILStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="9"
+                android:fontFamily="@font/josefinsans_regular"
+                android:hint="@string/pwdhint2"
+                android:text="@={signupviewmodel.password}"
+                android:inputType="textPassword"
+                android:textColor="@color/silver"
+                android:textSize="16sp"
+                android:theme="@style/Theme.App.Base"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/confirm_password"
+            android:textAlignment="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtPassword"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutCPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            app:boxCornerRadiusBottomEnd="0dp"
+            app:boxCornerRadiusBottomStart="0dp"
+            app:boxCornerRadiusTopEnd="0dp"
+            app:boxCornerRadiusTopStart="0dp"
+            app:hintTextAppearance="@style/TILStyle"
+            app:layout_constraintEnd_toEndOf="@id/inputLayoutPassword"
+            app:layout_constraintStart_toStartOf="@id/inputLayoutPassword"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutPassword"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCPassword"
+                style="@style/TILStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_regular"
+                android:hint="@string/pwdhint3"
+                android:text="@={signupviewmodel.confirmPassword}"
+                android:inputType="textPassword"
+                android:textColor="@color/silver"
+                android:textSize="15sp"
+                android:theme="@style/Theme.App.Base"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtFaceID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="21dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/allow_face_id_to_sign_in"
+            android:textAlignment="center"
+            android:textColor="@color/darkGrey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCPassword"/>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchFaceID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintBottom_toBottomOf="@id/txtFaceID"
+            app:layout_constraintEnd_toEndOf="@id/txtLayoutCPassword"
+            app:layout_constraintTop_toTopOf="@id/txtFaceID"
+            app:layout_constraintVertical_bias="0.645"
+            app:track="@drawable/track" />
+
+        <CheckBox
+            android:id="@+id/cbAgree"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/checkboxbg"
+            app:layout_constraintStart_toStartOf="@id/txtFaceID"
+            app:layout_constraintTop_toBottomOf="@id/txtFaceID"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTermsandCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="88dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="43dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/by_signing_up_you_are_agreeing_that_you_are_18_and_naccept_soughah_reward_s_terms_of_use"
+            android:textColor="@color/darkGrey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/cbAgree"
+            app:layout_constraintStart_toEndOf="@id/cbAgree"
+            app:layout_constraintTop_toBottomOf="@id/txtFaceID"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginBottom="200dp"
+            android:backgroundTint="@color/stormDust"
+            android:fontFamily="@font/josefinsans_regular"
+            android:paddingHorizontal="120dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="18dp"
+            android:text="@string/sign_up"
+
+            android:textSize="16sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTermsandCondition"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

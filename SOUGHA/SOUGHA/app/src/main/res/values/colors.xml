@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cream">#F9F5F1</color>
+    <color name="darkbrown">#ABA59F</color>
+    <color name="brown">#87744E</color>
+    <color name="foggyGrey">#A8A59F</color>
+    <color name="timberWolf">#CFCBC5</color>
+    <color name="stormDust">#686662</color>
+    <color name="Porcelain">#E1DDD9</color>
+    <color name="darkGrey">#212121</color>
+    <color name="silver">#BFBFBF</color>
+    <color name="silverlight">#BFBFBFCC</color>
+    <color name="DarkSilver">#514F4C</color>
+    <color name="darkblack">#1E1E1F</color>
+    <color name="light">#E1E1E1</color>
+    <color name="lightBlack">#030304</color>
+    <color name="lightBrown">#B7B7B7</color>
+    <color name="lightWhite">#FBFBFB</color>
+    <color name="darkBrown">#212121</color>
+    <color name="Grey">#00000080</color>
+    <color name="lightGrey">#686662</color>
+</resources>
